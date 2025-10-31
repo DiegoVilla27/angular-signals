@@ -1,0 +1,27 @@
+.counter {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+
+  p {
+    font-size: 4rem;
+  }
+
+  div {
+    display: flex;
+    gap: 10px;
+
+    button {
+      align-items: center;
+      border-radius: 8px;
+      color: #ffffff;
+      background-color: #000000;
+      display: flex;
+      height: 40px;
+      width: 120px;
+      justify-content: center;
+      border: none;
+    }
+  }
+}

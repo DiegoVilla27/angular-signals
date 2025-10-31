@@ -1,0 +1,16 @@
+<h2>Counter</h2>
+<p>
+  A simple example that uses Angular Signals to manage and update a reactive counter.
+  Each button interaction updates the signal’s value instantly in the view.
+</p>
+
+<br />
+
+<div class='counter'>
+  <p>{{ count() }}</p>
+  <div>
+    <button (click)="decrement()">-</button>
+    <button (click)="increment()">+</button>
+    <button (click)="reset()">Reset</button>
+  </div>
+</div>

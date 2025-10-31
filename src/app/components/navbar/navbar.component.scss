@@ -1,0 +1,26 @@
+header {
+  nav {
+    align-items: center;
+    border-bottom: 2px solid #8e51ff;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+
+    a {
+      align-items: center;
+      border-radius: 8px;
+      color: #8e51ff;
+      display: flex;
+      height: 40px;
+      justify-content: center;
+      text-decoration: none;
+      transition: all 0.2s ease-in-out;
+      width: 100%;
+    }
+  }
+}
+
+.active {
+  background-color: #8e51ff;
+  color: #ffffff !important;
+}

@@ -1,0 +1,11 @@
+<header>
+  <nav>
+    @for (item of menu; track item) {
+      <a 
+        [routerLink]="item.path"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >{{ item.title }}</a>
+    }
+  </nav>
+</header>
