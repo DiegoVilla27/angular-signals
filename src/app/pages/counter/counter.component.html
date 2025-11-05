@@ -1,7 +1,9 @@
 <h2>Counter</h2>
 <p>
-  A simple example that uses Angular Signals to manage and update a reactive counter.
-  Each button interaction updates the signal’s value instantly in the view.
+  A simple counter example using Angular Signals.  
+  It uses <code>set()</code> to directly replace the signal’s value (in <code>reset()</code>),  
+  and <code>update()</code> to modify the signal based on its previous value (in <code>increment()</code> and <code>decrement()</code>).  
+  Each change is instantly reflected in the view without manual subscriptions or change detection.
 </p>
 
 <br />

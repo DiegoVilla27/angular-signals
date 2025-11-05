@@ -1,0 +1,32 @@
+<div class='modal'>
+  <div class='modal-card'>
+    <div class='modal-card-header'>
+      <h3>{{ type === 'create' ? 'Create' : 'Edit' }} User</h3>
+      <span (click)="close.emit()">⨯</span>
+    </div>
+    <div class='modal-card-body'>
+      <form [formGroup]="form" autocomplete='off'>
+        <div>
+          <label for='id'>ID:</label>
+          <input id='id' type='number' formControlName='id'/>
+        </div>
+        <div>
+          <label for='name'>Name:</label>
+          <input id='name' type='text' formControlName='name'/>
+        </div>
+        <div>
+          <label for='email'>Email:</label>
+          <input id='email' type='email' formControlName='email'/>
+        </div>
+        <div>
+          <label for='phone'>Phone:</label>
+          <input id='phone' type='text' formControlName='phone'/>
+        </div>
+      </form>
+    </div>
+    <div class='modal-card-footer'>
+      <button class='btn btn-save' (click)="save()">Save</button>
+      <button class='btn btn-cancel' (click)="close.emit()">Cancel</button>
+    </div>
+  </div>
+</div>

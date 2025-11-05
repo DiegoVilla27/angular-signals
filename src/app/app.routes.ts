@@ -15,11 +15,11 @@ export const routes: Routes = [
         path: 'counter',
         loadComponent: () => import('./pages/counter/counter.component').then(c => c.CounterComponent)
       },
-      // {
-      //   title: 'Iterable Example',
-      //   path: 'iterable',
-      //   loadComponent: () => import('./pages/iterable/iterable.component').then(c => c.IterableComponent)
-      // },
+      {
+        title: 'Users Example',
+        path: 'users',
+        loadComponent: () => import('./pages/users/users.component').then(c => c.UsersComponent)
+      },
       // {
       //   title: 'Cases Example',
       //   path: 'cases',

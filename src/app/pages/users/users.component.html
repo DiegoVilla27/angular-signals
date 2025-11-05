@@ -1,0 +1,49 @@
+<h2>Users</h2>
+<p>
+  A simple example that displays a list of users fetched from an external API using Angular Signals.  
+  The component reacts automatically to data changes — no manual subscriptions or change detection are required.  
+  When the signal’s value updates, the table instantly reflects the new user data in a clean and minimal layout.
+</p>
+
+<br />
+
+<div class='users'>
+  <button class='btn btn-create' (click)="manageUser(null, 'create')">Create user</button>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (user of users(); track user) {
+        <tr>
+          <td scope="row">{{ user.id }}</td>
+          <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.phone }}</td>
+          <td>
+            <button class='btn btn-edit' (click)="manageUser(user.id, 'edit')">Edit</button>
+            <button class='btn btn-delete' (click)="deleteUser(user.id)">Delete</button>
+          </td>
+        </tr>
+      } @empty {
+        <tr>
+          <td colspan="5">No users found.</td>
+        </tr> 
+      }
+    </tbody>
+  </table>
+</div>
+
+@if (userSelected) {
+  <signals-user-modal 
+    [userId]="userSelected.id" 
+    [type]="userSelected.type" 
+    (close)="clearUserSelected()"
+  />
+}
